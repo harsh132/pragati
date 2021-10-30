@@ -6,7 +6,7 @@ import HomeNav from "./components/HomeNav";
 import Login from "./components/Login";
 import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AdminDashboard from "./components/AdminDashboard";
 import NGORepDashboard from "./components/NGORepDashboard";
 import Stats from "./components/Stats";

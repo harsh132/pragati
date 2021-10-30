@@ -1,5 +1,5 @@
 import { Navbar, Nav, Container, NavDropdown, Button } from "react-bootstrap";
-import { getAuth, signOut } from "firebase/auth";
+import { getAuth } from "firebase/auth";
 import { Link, useHistory } from "react-router-dom";
 
 function HomeNav({ user }) {

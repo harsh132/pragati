@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Container, Form, Button, Toast, ToastContainer } from "react-bootstrap";
-import { getFirestore, collection, query, where, getDocs, setDoc, doc } from "firebase/firestore";
+import { Form, Button, Toast, ToastContainer } from "react-bootstrap";
+import { getFirestore, setDoc, doc } from "firebase/firestore";
 
 function AddVillager() {
     const [show, setShow] = useState(false);

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Container, Form, Button, Toast, ToastContainer } from "react-bootstrap";
-import { getFirestore, collection, query, where, getDocs, addDoc, doc } from "firebase/firestore";
+import { Form, Button, Toast, ToastContainer } from "react-bootstrap";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
 
 function AddData() {
     const [show, setShow] = useState(false);

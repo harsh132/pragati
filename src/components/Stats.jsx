@@ -1,23 +1,7 @@
 import React from "react";
 import { Container, Form, Button } from "react-bootstrap";
-import { getFirestore, collection, query, where, getDocs, setDoc, doc } from "firebase/firestore";
-import {
-    LineChart,
-    PieChart,
-    Pie,
-    Sector,
-    Cell,
-    ResponsiveContainer,
-    Tooltip,
-    CartesianGrid,
-    XAxis,
-    YAxis,
-    Legend,
-    Line,
-    BarChart,
-    Bar,
-    Label,
-} from "recharts";
+import { getFirestore, collection, query, getDocs } from "firebase/firestore";
+import { LineChart, PieChart, Pie, Cell, Tooltip, CartesianGrid, XAxis, YAxis, Line, BarChart, Bar } from "recharts";
 
 function Stats() {
     const [result, setResult] = React.useState(false);
