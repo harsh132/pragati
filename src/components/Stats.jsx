@@ -58,7 +58,7 @@ function Stats() {
         };
         querySnapshot.forEach(doc => {
             // console.log(doc.id, " => ", doc.data());
-            if (doc.data().diseases == "yes") illVillager++;
+            if (doc.data().diseases === "yes") illVillager++;
             else healthyVillager++;
             edu[doc.data().education]++;
         });
