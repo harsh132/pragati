@@ -19,7 +19,7 @@ function AddData() {
             data.suffereddiseases = e.target.suffereddiseases.value;
         }
         console.log(data);
-        addDoc(collection(db, "villages/villageA/villagerdata"), data)
+        addDoc(collection(db, "villages/" + e.target.village.value + "/villagerdata"), data)
             .then(() => setShow(true))
             .catch(console.error);
         e.target.reset();
@@ -30,6 +30,13 @@ function AddData() {
             <hr />
             <br />
             <Form onSubmit={createVillager}>
+                <Form.Group className="mb-3" controlId="village">
+                    <Form.Label>Village :</Form.Label>
+                    <Form.Select aria-label="village">
+                        <option value="villageA">VillageA</option>
+                        <option value="villageB">VillageB</option>
+                    </Form.Select>
+                </Form.Group>
                 <Form.Group className="mb-3" controlId="aadhar">
                     <Form.Label>Aadhar :</Form.Label>
                     <Form.Control type="text" placeholder="Aadhar" />

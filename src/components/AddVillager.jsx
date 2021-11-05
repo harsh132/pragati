@@ -18,7 +18,7 @@ function AddVillager() {
             caste: e.target.caste.value,
         };
         console.log(data);
-        setDoc(doc(db, "villages/villageA/villagers", e.target.aadhar.value), data)
+        setDoc(doc(db, "villages/" + e.target.village.value + "/villagers", e.target.aadhar.value), data)
             .then(() => setShow(true))
             .catch(console.error);
         e.target.reset();
@@ -29,6 +29,13 @@ function AddVillager() {
             <hr />
             <br />
             <Form onSubmit={createVillager}>
+                <Form.Group className="mb-3" controlId="village">
+                    <Form.Label>Village :</Form.Label>
+                    <Form.Select aria-label="village">
+                        <option value="villageA">VillageA</option>
+                        <option value="villageB">VillageB</option>
+                    </Form.Select>
+                </Form.Group>
                 <Form.Group className="mb-3" controlId="name">
                     <Form.Label>Name :</Form.Label>
                     <Form.Control type="text" placeholder="Enter villager name" />
